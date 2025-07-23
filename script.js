@@ -1,11 +1,22 @@
-// Saat halaman dimuat, tampilkan pesan selamat datang
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function () {
+  // Tampilkan alert selamat datang
   alert("Selamat datang di LPK WTC Singaraja!");
   tampilkanSalam();
   setInterval(tampilkanWaktu, 1000);
-};
 
-// Fungsi untuk menampilkan salam sesuai waktu
+  // Klik info
+  document.getElementById("infoBtn").onclick = function() {
+    alert("Informasi lengkap akan segera tersedia di website kami.");
+  };
+
+  // Ganti warna background
+  document.getElementById("gantiWarnaBtn").onclick = function() {
+    const warnaAcak = "#" + Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = warnaAcak;
+  };
+});
+
+// Fungsi salam
 function tampilkanSalam() {
   const jam = new Date().getHours();
   let salam = "";
@@ -23,7 +34,7 @@ function tampilkanSalam() {
   document.getElementById("salam").textContent = salam;
 }
 
-// Fungsi untuk menampilkan waktu saat ini
+// Fungsi waktu
 function tampilkanWaktu() {
   const sekarang = new Date();
   const jam = String(sekarang.getHours()).padStart(2, '0');
@@ -32,14 +43,3 @@ function tampilkanWaktu() {
 
   document.getElementById("jam").textContent = `${jam}:${menit}:${detik}`;
 }
-
-// Fungsi tombol info
-document.getElementById("infoBtn").onclick = function() {
-  alert("Informasi lengkap akan segera tersedia di website kami.");
-};
-
-// Fungsi untuk mengganti warna background
-document.getElementById("gantiWarnaBtn").onclick = function() {
-  const warnaAcak = "#" + Math.floor(Math.random()*16777215).toString(16);
-  document.body.style.backgroundColor = warnaAcak;
-};
