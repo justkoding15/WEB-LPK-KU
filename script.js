@@ -20,16 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (tombolWarna) {
     tombolWarna.onclick = function () {
-      if (gelap) {
-        document.body.style.backgroundColor = "#ffffff";
-        document.body.style.color = "#000000";
-        tombolWarna.textContent = "Mode Gelap";
-      } else {
-        document.body.style.backgroundColor = "#000000";
-        document.body.style.color = "#ffffff";
-        tombolWarna.textContent = "Mode Terang";
-      }
+      document.body.classList.toggle("dark-mode");
       gelap = !gelap;
+      tombolWarna.textContent = gelap ? "Mode Terang" : "Mode Gelap";
     };
   }
 });
