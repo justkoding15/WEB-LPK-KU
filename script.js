@@ -10,21 +10,25 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // Toggle warna hitam ↔ putih
-let gelap = false;
+document.addEventListener("DOMContentLoaded", function () {
+  let gelap = false;
 
-document.getElementById("gantiWarnaBtn").onclick = function () {
-  if (gelap) {
-    document.body.style.backgroundColor = "#ffffff";
-    document.body.style.color = "#000000";
-    this.textContent = "Mode Gelap";
-  } else {
-    document.body.style.backgroundColor = "#000000";
-    document.body.style.color = "#ffffff";
-    this.textContent = "Mode Terang";
-  }
-  gelap = !gelap;
-};
+  document.getElementById("gantiWarnaBtn").onclick = function () {
+    if (gelap) {
+      document.body.style.backgroundColor = "#ffffff";
+      document.body.style.color = "#000000";
+      this.textContent = "Mode Gelap";
+    } else {
+      document.body.style.backgroundColor = "#000000";
+      document.body.style.color = "#ffffff";
+      this.textContent = "Mode Terang";
+    }
+    gelap = !gelap;
+  };
+});
 
+
+  
 // Fungsi salam
 function tampilkanSalam() {
   const jam = new Date().getHours();
