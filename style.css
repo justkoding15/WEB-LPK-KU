@@ -1,91 +1,66 @@
-/* Navigasi sidebar vertikal */
-nav {
-  position: fixed; /* biar tetap di tempat saat scroll */
-  top: 0;
-  left: 0;
-  height: 100vh; /* penuh tinggi layar */
-  width: 220px;
-  background: linear-gradient(180deg, #1d3557, #457b9d);
-  padding: 30px 20px;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+.main-content {
   display: flex;
-  flex-direction: column;
+  gap: 40px;
+  flex-wrap: wrap; /* biar responsif di layar kecil */
+  margin: 20px;
+  justify-content: center;
   align-items: flex-start;
-  z-index: 1000;
 }
 
-nav ul {
-  list-style: none;
-  width: 100%;
-  padding: 0;
-  margin-top: 40px;
+/* Panel kiri: salam, waktu, tombol ganti warna */
+.info-panel {
+  flex: 1 1 250px; /* minimal lebar 250px */
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Panel kanan: visi dan kontak */
+.visi-kontak-panel {
+  flex: 2 1 500px; /* minimal 500px, lebih besar */
   display: flex;
-  flex-direction: column;
-  gap: 18px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-nav ul li {
-  width: 100%;
+/* Visi dan kontak masing-masing kotak */
+.visi, .kontak {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 220px;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 20px;
-  display: block;
+/* Sedikit styling tombol */
+button {
+  margin-top: 15px;
+  padding: 12px 24px;
   font-weight: 600;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-/* Input search di sidebar */
-nav input[type="text"] {
-  width: 100%;
-  padding: 10px 14px;
-  border-radius: 8px;
   border: none;
-  outline: none;
-  margin-top: 20px;
-  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
 }
 
-/* Supaya konten utama tidak tertutup sidebar */
-body {
-  margin-left: 240px; /* agak lebih besar dari lebar nav */
-  transition: margin-left 0.3s ease;
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
-/* Responsif untuk layar kecil (misal HP) */
+/* Responsive untuk layar kecil */
 @media (max-width: 768px) {
-  nav {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 15px 10px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: none;
+  .main-content {
+    flex-direction: column;
+    margin: 10px;
   }
 
-  nav ul {
-    flex-direction: row;
-    margin-top: 0;
-    gap: 12px;
-  }
-
-  nav input[type="text"] {
-    width: auto;
-    margin-top: 0;
-    flex-grow: 1;
-    margin-left: 15px;
-  }
-
-  body {
-    margin-left: 0;
+  .visi-kontak-panel {
+    flex-direction: column;
   }
 }
