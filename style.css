@@ -1,46 +1,120 @@
-.main-content {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap; /* biar responsif di layar kecil */
-  margin: 20px;
-  justify-content: center;
-  align-items: flex-start;
+/* ===== Import Font Modern ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ===== Reset & Font Global ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Panel kiri: salam, waktu, tombol ganti warna */
-.info-panel {
-  flex: 1 1 250px; /* minimal lebar 250px */
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Panel kanan: visi dan kontak */
-.visi-kontak-panel {
-  flex: 2 1 500px; /* minimal 500px, lebih besar */
+/* ===== Navigasi Header Modern ===== */
+nav {
+  background: linear-gradient(90deg, #1d3557, #457b9d);
+  padding: 16px 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
   display: flex;
-  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* Visi dan kontak masing-masing kotak */
-.visi, .kontak {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  flex: 1 1 220px;
+nav ul li {
+  display: inline;
 }
 
-/* Sedikit styling tombol */
-button {
-  margin-top: 15px;
-  padding: 12px 24px;
-  font-weight: 600;
-  border-radius: 8px;
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+nav input[type="text"] {
+  padding: 8px 14px;
   border: none;
+  border-radius: 6px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Judul Utama ===== */
+h1 {
+  text-align: center;
+  margin: 40px 0 10px;
+  color: #1d3557;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* ===== Subjudul ===== */
+h2 {
+  margin: 30px 20px 10px;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ===== Paragraf Umum ===== */
+p {
+  margin: 0 20px 20px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ===== Gambar Logo ===== */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== Salam dan Jam ===== */
+#salam {
+  margin-left: 20px;
+  font-size: 1.3rem;
+  color: #2a2a2a;
+}
+
+#jam {
+  font-weight: 600;
+  color: #457b9d;
+}
+
+/* ===== Tombol Modern (sudah kamu pakai) ===== */
+button {
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
   background: linear-gradient(135deg, #4e54c8, #8f94fb);
   color: white;
   cursor: pointer;
@@ -53,14 +127,18 @@ button:hover {
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
-/* Responsive untuk layar kecil */
+/* ===== Responsif Mobile ===== */
 @media (max-width: 768px) {
-  .main-content {
+  nav ul {
     flex-direction: column;
-    margin: 10px;
+    gap: 12px;
   }
 
-  .visi-kontak-panel {
-    flex-direction: column;
+  nav input[type="text"] {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 }
