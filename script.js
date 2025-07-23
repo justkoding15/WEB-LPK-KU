@@ -2,21 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
   tampilkanSalam();
   setInterval(tampilkanWaktu, 1000);
 
-  const infoBtn = document.getElementById("infoBtn");
-  if (infoBtn) {
-    infoBtn.onclick = function () {
-      alert("Informasi lengkap akan segera tersedia di website kami.");
-    };
-  }
+  const modeBtn = document.getElementById("gantiModeBtn");
+  const iconMode = document.getElementById("iconMode");
 
-let gelap = false;
-  const tombolWarna = document.getElementById("gantiWarnaBtn");
-
-  if (tombolWarna) {
-    tombolWarna.onclick = function () {
+  if (modeBtn) {
+    modeBtn.onclick = function () {
       document.body.classList.toggle("dark-mode");
-      gelap = !gelap;
-      tombolWarna.textContent = gelap ? "Mode Terang" : "Mode Gelap";
+      const isDark = document.body.classList.contains("dark-mode");
+      iconMode.textContent = isDark ? "☀️" : "🌙";
     };
   }
 });
