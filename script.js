@@ -9,12 +9,21 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("Informasi lengkap akan segera tersedia di website kami.");
   };
 
-  // Ganti warna background
-  document.getElementById("gantiWarnaBtn").onclick = function() {
-    const warnaAcak = "#" + Math.floor(Math.random()*16777215).toString(16);
-    document.body.style.backgroundColor = warnaAcak;
-  };
-});
+  // Toggle warna hitam ↔ putih
+let gelap = false;
+
+document.getElementById("gantiWarnaBtn").onclick = function () {
+  if (gelap) {
+    document.body.style.backgroundColor = "#ffffff";
+    document.body.style.color = "#000000";
+    this.textContent = "Mode Gelap";
+  } else {
+    document.body.style.backgroundColor = "#000000";
+    document.body.style.color = "#ffffff";
+    this.textContent = "Mode Terang";
+  }
+  gelap = !gelap;
+};
 
 // Fungsi salam
 function tampilkanSalam() {
