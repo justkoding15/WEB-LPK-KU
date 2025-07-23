@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", function () {
+  tampilkanSalam();
+  setInterval(tampilkanWaktu, 1000);
+
+  const infoBtn = document.getElementById("infoBtn");
+  if (infoBtn) {
+    infoBtn.onclick = function () {
+      alert("Informasi lengkap akan segera tersedia di website kami.");
+    };
+  }
+
 let gelap = false;
   const tombolWarna = document.getElementById("gantiWarnaBtn");
 
