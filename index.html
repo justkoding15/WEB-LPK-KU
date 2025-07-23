@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WTC Singaraja</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -14,26 +15,35 @@
       <li><a href="#">Profil</a></li>
       <li><a href="#">Program</a></li>
       <li><a href="#">Kontak</a></li>
-      <li><input type="text" placeholder="Search..."></li>
+      <li><input type="text" placeholder="Search..." /></li>
     </ul>
   </nav>
 
   <h1>Selamat Datang di LPK WTC Singaraja</h1>
-  <img src="logo LPK.jpg" alt="logo sekolah" width="300">
-  
-  <h2 id="salam"></h2>
-  <p>Waktu sekarang: <span id="jam"></span></p>
-  <button id="gantiWarnaBtn">Mode Gelap</button>
+  <img src="logo LPK.jpg" alt="logo sekolah" width="300" />
 
-  <h2>Visi Kami</h2>
-  <p>shiken mendadak dan setiap hari.</p>
+  <!-- Bagian isi utama dengan layout menyamping -->
+  <div class="main-content">
+    <div class="salaman-dan-waktu">
+      <h2 id="salam"></h2>
+      <p>Waktu sekarang: <span id="jam"></span></p>
+      <button id="gantiWarnaBtn">Mode Gelap</button>
+    </div>
 
-  <h2>Kontak</h2>
-  <p>Alamat: Banyuning Utara</p>
-  <p>Email: wtcsgr@gmail.com</p>
-  <button id="infoBtn">Klik untuk info lebih lanjut</button>
+    <div class="visi-dan-kontak">
+      <div class="visi">
+        <h2>Visi Kami</h2>
+        <p>shiken mendadak.</p>
+      </div>
+      <div class="kontak">
+        <h2>Kontak</h2>
+        <p>Alamat: Banyuning Utara</p>
+        <p>Email: wtcsgr@gmail.com</p>
+        <button id="infoBtn">Klik untuk info lebih lanjut</button>
+      </div>
+    </div>
+  </div>
 
-  <!-- PENTING: script.js dipanggil di bawah agar elemen HTML sudah siap -->
   <script src="script.js"></script>
 </body>
 </html>
