@@ -1,37 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WTC Singaraja</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Selamat Datang di LPK WTC Singaraja</h1>
-    <img src="logo LPK.jpg" alt="logo sekolah" width="300">
-  </header>
 
-  <main>
-    <section>
-      <h2>Visi Kami</h2>
-      <p>Menghasilkan Tenaga Kerja SDM yang unggul dan beretika.</p>
-    </section>
+  <!-- Navigasi Dashboard -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Profil</a></li>
+      <li><a href="#">Program</a></li>
+      <li><a href="#">Kontak</a></li>
+      <li><input type="text" placeholder="Search..." /></li>
+    </ul>
+  </nav>
 
-    <section>
-      <h2>Kontak</h2>
-      <p>Alamat: Banyuning Utara</p>
-      <p>Email: wtcsgr@gmail.com</p>
-    </section>
+  <h1>Selamat Datang di LPK WTC Singaraja</h1>
+  <img src="logo LPK.jpg" alt="logo sekolah" width="300" />
 
-    <section>
-      <button id="infoButton">Klik untuk informasi tambahan</button>
-      <p id="extraInfo" class="hidden">LPK WTC Singaraja siap memberangkatkan peserta magang ke Jepang!</p>
-    </section>
-  </main>
+  <!-- Bagian isi utama dengan layout menyamping -->
+  <div class="main-content">
+    <div class="salaman-dan-waktu">
+      <h2 id="salam"></h2>
+      <p>Waktu sekarang: <span id="jam"></span></p>
+      <button id="gantiWarnaBtn">Mode Gelap</button>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 WTC Singaraja</p>
-  </footer>
+    <div class="visi-dan-kontak">
+      <div class="visi">
+        <h2>Visi Kami</h2>
+        <p>Profesionalisme kerja membuat kehidupan jadi lebih baik dan bermartabat.</p>
+      </div>
+      <div class="kontak">
+        <h2>Kontak</h2>
+        <p>Alamat: Banyuning Utara</p>
+        <p>Email: wtcsgr@gmail.com</p>
+        <button id="infoBtn">Klik untuk info lebih lanjut</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
