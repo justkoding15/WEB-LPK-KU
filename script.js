@@ -1,16 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-  alert("Selamat datang di LPK WTC Singaraja!");
-  tampilkanSalam();
-  setInterval(tampilkanWaktu, 1000);
-
-  const infoBtn = document.getElementById("infoBtn");
-  if (infoBtn) {
-    infoBtn.onclick = function () {
-      alert("Informasi lengkap akan segera tersedia di website kami.");
-    };
-  }
-
-  let gelap = false;
+let gelap = false;
   const tombolWarna = document.getElementById("gantiWarnaBtn");
 
   if (tombolWarna) {
