@@ -7,42 +7,41 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Navigasi Dashboard -->
+  <!-- Navigasi -->
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">Profil</a></li>
-      <li><a href="#">Program</a></li>
-      <li><a href="#">Kontak</a></li>
-      <li><input type="text" placeholder="Search..." /></li>
+      <li><a href="#">Legalitas</a></li>
+      <li><a href="#">Galeri</a></li>
+      <li><a href="#">Kontak Kami</a></li>
+      <li><button id="gantiModeBtn" title="Ganti Mode"><span id="iconMode">🌙</span></button></li>
     </ul>
   </nav>
 
-  <h1>Selamat Datang di LPK WTC Singaraja</h1>
-  <img src="logo LPK.jpg" alt="logo sekolah" width="300" />
+  <!-- Logo -->
+  <header class="logo-container">
+    <h1>Selamat Datang di LPK WTC Singaraja</h1>
+    <img src="logo LPK.jpg" alt="logo sekolah" />
+  </header>
 
-  <!-- Bagian isi utama dengan layout menyamping -->
-  <div class="main-content">
-    <div class="salaman-dan-waktu">
-      <h2 id="salam"></h2>
-      <p>Waktu sekarang: <span id="jam"></span></p>
-      <button id="gantiWarnaBtn">Mode Gelap</button>
+  <!-- Visi dan Misi -->
+  <section class="visi-misi">
+    <div class="visi">
+      <h2>Visi Kami</h2>
+      <p>Profesionalisme kerja membuat kehidupan jadi lebih baik dan bermartabat.</p>
     </div>
+    <div class="misi">
+      <h2>Misi Kami</h2>
+      <p>Meningkatkan kualitas SDM melalui pelatihan kerja yang berkelanjutan dan membentuk karakter disiplin serta kompeten untuk bersaing secara global.</p>
+    </div>
+  </section>
 
-    <div class="visi-dan-kontak">
-      <div class="visi">
-        <h2>Visi Kami</h2>
-        <p>Profesionalisme kerja membuat kehidupan jadi lebih baik dan bermartabat.</p>
-      </div>
-      <div class="kontak">
-        <h2>Kontak</h2>
-        <p>Alamat: Banyuning Utara</p>
-        <p>Email: wtcsgr@gmail.com</p>
-        <button id="infoBtn">Klik untuk info lebih lanjut</button>
-      </div>
-    </div>
-  </div>
+  <!-- Salam dan Waktu -->
+  <footer class="footer-info">
+    <h2 id="salam"></h2>
+    <p>Waktu sekarang: <span id="jam"></span></p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
