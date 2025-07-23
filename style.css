@@ -1,15 +1,71 @@
+/* Reset dasar */
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 50px;
-  background-color: #f0f8ff;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
+/* Navigasi */
+nav {
+  background-color: #007bff; /* Biru tua */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #0056b3;
+}
+
+nav input[type="text"] {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Header utama */
 h1 {
-  color: #004080;
+  text-align: center;
+  margin-top: 30px;
+  color: #007bff;
 }
 
+/* Logo */
 img {
+  display: block;
+  margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px gray;
+}
+
+/* Subjudul dan isi */
+h2 {
+  color: #555;
+  margin-left: 20px;
+}
+
+p {
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 1.6;
 }
