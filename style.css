@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+  background-color: #f0f8ff;
+}
+
+h1 {
+  color: #004080;
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+}
