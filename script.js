@@ -1,16 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Tampilkan alert selamat datang
   alert("Selamat datang di LPK WTC Singaraja!");
+
+  // Tampilkan salam dan waktu
   tampilkanSalam();
   setInterval(tampilkanWaktu, 1000);
 
-  // Klik info
-  document.getElementById("infoBtn").onclick = function() {
+  // Klik tombol info
+  document.getElementById("infoBtn").onclick = function () {
     alert("Informasi lengkap akan segera tersedia di website kami.");
   };
 
-  // Toggle warna hitam ↔ putih
-document.addEventListener("DOMContentLoaded", function () {
+  // Toggle warna latar belakang: hitam ↔ putih
   let gelap = false;
 
   document.getElementById("gantiWarnaBtn").onclick = function () {
@@ -27,9 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 });
 
-
-  
-// Fungsi salam
+// Fungsi untuk menampilkan salam sesuai waktu
 function tampilkanSalam() {
   const jam = new Date().getHours();
   let salam = "";
@@ -47,7 +46,7 @@ function tampilkanSalam() {
   document.getElementById("salam").textContent = salam;
 }
 
-// Fungsi waktu
+// Fungsi untuk menampilkan waktu saat ini
 function tampilkanWaktu() {
   const sekarang = new Date();
   const jam = String(sekarang.getHours()).padStart(2, '0');
@@ -56,3 +55,4 @@ function tampilkanWaktu() {
 
   document.getElementById("jam").textContent = `${jam}:${menit}:${detik}`;
 }
+
