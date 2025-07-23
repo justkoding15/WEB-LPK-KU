@@ -1,19 +1,225 @@
+/* ===== Import Font Modern ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ===== Reset & Font Global ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ===== Navigasi Header Modern ===== */
+nav {
+  background: linear-gradient(90deg, #1d3557, #457b9d);
+  padding: 16px 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+nav input[type="text"] {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Judul Utama ===== */
+h1 {
+  text-align: center;
+  margin: 40px 0 10px;
+  color: #1d3557;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* ===== Subjudul ===== */
+h2 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ===== Paragraf Umum ===== */
+p {
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ===== Gambar Logo ===== */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== Salam dan Jam ===== */
+#salam {
+  font-size: 1.3rem;
+  color: #2a2a2a;
+  margin-bottom: 10px;
+}
+
+#jam {
+  font-weight: 600;
+  color: #457b9d;
+}
+
+/* ===== Tombol Modern ===== */
+button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* ===== Layout menyamping untuk konten utama ===== */
+.main-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.salaman-dan-waktu {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.visi-dan-kontak {
+  flex: 2 1 500px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.visi, .kontak {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 220px;
+}
+
+/* ===== Responsif Mobile ===== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav input[type="text"] {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .visi-dan-kontak {
+    flex-direction: column;
+  }
+}
 /* ===== Mode Gelap ===== */
 body.dark-mode {
-  background-color: #000000;
+  background-color: #121212;
   color: #ffffff;
 }
 
 body.dark-mode nav {
-  background: linear-gradient(90deg, #111111, #333333);
+  background: linear-gradient(90deg, #1a1a1a, #2e2e2e);
 }
 
-body.dark-mode h1,
-body.dark-mode h2,
+body.dark-mode nav a {
+  color: #ffffff;
+}
+
+body.dark-mode nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode nav input[type="text"] {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+body.dark-mode h1 {
+  color: #ffffff;
+}
+
+body.dark-mode h2 {
+  color: #e0e0e0;
+}
+
 body.dark-mode p,
 body.dark-mode #salam,
 body.dark-mode #jam {
-  color: #ffffff;
+  color: #cccccc;
 }
 
 body.dark-mode .salaman-dan-waktu,
@@ -23,8 +229,23 @@ body.dark-mode .kontak {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
 }
 
-/* Tombol dalam mode gelap tetap terlihat jelas */
+/* Tombol dalam mode gelap */
 body.dark-mode button {
-  background: linear-gradient(135deg, #999999, #cccccc);
+  background: linear-gradient(135deg, #888888, #aaaaaa);
   color: #000000;
+}
+
+/* Transisi halus untuk semua elemen yang berubah */
+body,
+nav,
+nav a,
+nav input[type="text"],
+h1,
+h2,
+p,
+.salaman-dan-waktu,
+.visi,
+.kontak,
+button {
+  transition: all 0.4s ease;
 }
