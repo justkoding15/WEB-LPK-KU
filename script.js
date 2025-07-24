@@ -19,13 +19,13 @@ function tampilkanSalam() {
   let salam = "";
 
   if (jam >= 5 && jam < 11) {
-    salam = "Selamat Pagi!";
+    salam = "Selamat Pagi!おはようございます";
   } else if (jam >= 11 && jam < 15) {
-    salam = "Selamat Siang!";
+    salam = "Selamat Siang!こんにちは";
   } else if (jam >= 15 && jam < 18) {
-    salam = "Selamat Sore!";
+    salam = "Selamat Sore!こんにちは";
   } else {
-    salam = "Selamat Malam!";
+    salam = "Selamat Malam!こんばんは";
   }
 
   document.getElementById("salam").textContent = salam;
